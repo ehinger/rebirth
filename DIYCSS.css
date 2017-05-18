@@ -1,0 +1,253 @@
+html, body, div {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0; 
+  font-size: 16px;
+}
+
+/****************************************************
+
+Log In Page
+
+****************************************************/
+
+.MainBackground {
+	position: relative;
+	background-image: url("bgPattern.png");
+    background-repeat: repeat;
+}
+
+.SplashContainer {
+	position: fixed;
+	background: #ffffff;
+	border-radius: 15px;
+	margin: 50px;
+	width: calc(100% - 6em);
+	height: calc(100% - 6em);
+	box-shadow: 10px 10px 50px rgba(0,0,0,0.2);
+}
+
+#LogInContainer {
+	display: block;
+}
+
+#LogInContainer h1 {
+	font-size: 4rem;
+	font-family: 'Gotham', sans-serif;
+	position: relative;
+	margin: 15% 10% 5%;
+	text-align: center;
+}
+
+#LogInContainer h1:nth-child(1) {
+	font-size: 6rem;
+	font-family: 'Gotham', sans-serif;
+	position: relative;
+	margin: 10% 10% 5%;
+	text-align: center;
+}
+
+#LogInContainer p:nth-child(2) {
+	font-size: 3rem;
+	font-family: 'Gotham', sans-serif;
+	position: relative;
+	margin: 2% 10% 2%;
+}
+
+#LogInContainer p {
+	position: relative;
+	margin: 15%;
+	font-size: 2rem;
+	font-family: "Gotham", sans-serif;
+	color: #000000;
+	text-align: center;
+}
+
+/****************************************************
+
+Log In Form
+
+****************************************************/
+
+.LogIn label {
+	display: inline-block;
+	text-align: left;
+	font-size: 1.8rem;
+	font-family: "Gotham", sans-serif;
+	color: #000000; 
+	margin: 0 13.5%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translate3d(0, -5.2em, 0);
+	transform: translate3d(0, -5.2em, 0);
+}
+
+.LogIn input {
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	width: 72%;
+	height: 15%;
+	margin: 0 10% 8%;
+	padding: 1em;
+	font-size: 2rem;
+	border: 0;
+	outline: 0;
+	background: transparent;
+  	border-bottom: 2px solid #444444;
+}
+
+.LogIn input::placeholder {
+	color: #000000;
+	font-size: 2rem;
+}
+
+.LogIn input[type=submit] {
+	width: 80%;
+	height: 15%;
+	margin: 0 10%;
+	font-size: 2.5rem;
+	background: transparent;
+	border-bottom: 5px solid #444444;
+	font-weight: 700;
+}
+
+/****************************************************
+
+Register Page
+
+****************************************************/
+
+#RegisterContainer {
+	display: none;
+}
+
+#RegisterContainer h1 {
+	font-size: 4rem;
+	font-family: 'Gotham', sans-serif;
+	position: relative;
+	margin: 15% 10% 5%;
+	text-align: center;
+}
+
+#RegisterContainer p {
+	position: relative;
+	margin: 0 15% 5%;
+	font-size: 1.5rem;
+	font-family: "Gotham", sans-serif;
+	color: #000000;
+}
+
+#LogInReturnLink {
+	margin: 20% 15% !important;
+	font-size: 2rem !important;
+	text-align: center;
+}
+
+
+/****************************************************
+
+Register Form
+
+****************************************************/
+
+.Register label {
+	display: inline-block;
+	text-align: left;
+	font-size: 1.8rem;
+	font-family: "Gotham", sans-serif;
+	color: #000000; 
+	margin: 0 13.5%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translate3d(0, -5.2em, 0);
+	transform: translate3d(0, -5.2em, 0);
+}
+
+.Register input {
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	width: 72%;
+	height: 15%;
+	margin: 0 10% 8%;
+	padding: 1em;
+	font-size: 2rem;
+	border: 0;
+	outline: 0;
+	background: transparent;
+  	border-bottom: 2px solid #444444;
+}
+
+
+.Register input::placeholder {
+	color: #000000;
+	font-size: 2rem;
+}
+
+.Register input[type=submit] {
+	width: 80%;
+	height: 15%;
+	margin: 2% 10%;
+	font-size: 2.5rem;
+	background: transparent;
+	border-bottom: 5px solid #444444;
+	font-weight: 700;
+}
+
+/* This covers all forms in the application */
+input:focus + label, .inputActive + label{
+	-webkit-transform: translate3d(0, -6.7em, 0);
+	transform: translate3d(0, -6.7em, 0);
+}
+
+label::after {
+	content: '';
+    position: absolute;
+    opacity: 0;
+	-webkit-transform: translate3d(0, 2.3em, 0);
+	transform: translate3d(0, 2.3em, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.fName:focus + label::after {
+	content: 'Just your first name will do.';
+	opacity: .8;
+	color: #0044ff;
+    position: absolute;
+	top: 50%;
+	width: 65vw;
+	left: 0;
+	z-index: 2;
+	-webkit-transform: translate3d(0, 4.3em, 0);
+	transform: translate3d(0, 4.3em, 0);
+}
+
+.usernameR:focus + label::after {
+	content: "pssst you'll use this to log in";
+	opacity: .8;
+	color: #0044ff;
+    position: absolute;
+	top: 50%;
+	width: 65vw;
+	left: 0;
+	z-index: 2;
+	-webkit-transform: translate3d(0, 4.3em, 0);
+	transform: translate3d(0, 4.3em, 0);
+}
+
+.passwordR:focus + label::after {
+	content: 'Using numbers and capitilised letters makes your password harder to crack';
+	opacity: .8;
+	color: #0044ff;
+    position: absolute;
+	top: 50%;
+	width: 65vw;
+	left: 0;
+	z-index: 2;
+	-webkit-transform: translate3d(0, 4.3em, 0);
+	transform: translate3d(0, 4.3em, 0);
+}
