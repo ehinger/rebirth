@@ -25,7 +25,7 @@ Log In Page
 	border-radius: 15px;
 	margin: 50px;
 	width: calc(100vw - 6em);
-	height: calc(100vw - 6em);
+	height: calc(100vh - 6em);
 	box-shadow: 10px 10px 50px rgba(0,0,0,0.2);
 }
 
