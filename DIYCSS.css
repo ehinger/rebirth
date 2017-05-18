@@ -5,6 +5,7 @@ html, body, div {
   padding: 0;
   border: 0; 
   font-size: 16px;
+  overflow-y: scroll;
 }
 
 /****************************************************
@@ -14,7 +15,7 @@ Log In Page
 ****************************************************/
 
 .MainBackground {
-	position: relative;
+	position: absolute;
 	background-image: url("bgPattern.png");
     background-repeat: repeat;
 }
