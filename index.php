@@ -44,7 +44,7 @@
 				<label>What's your name, friend?</label>
 
 				<input class="usernameR" name="usernameR" type="text">
-				<label>What's your username?</label>
+				<label>What'll your username be?</label>
 				
 				<input class="passwordR" name="passwordR" type="password">
 				<label>What'll your password be?</label>
