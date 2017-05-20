@@ -81,8 +81,8 @@ Log In Form
 	margin: 0 13.5%;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
-	-webkit-transform: translate3d(0, -5.2em, 0);
-	transform: translate3d(0, -5.2em, 0);
+	-webkit-transform: translate3d(0, -6em, 0);
+	transform: translate3d(0, -6em, 0);
 }
 
 .LogIn input {
@@ -129,7 +129,7 @@ Register Page
 	font-size: 4rem;
 	font-family: 'Gotham', sans-serif;
 	position: relative;
-	margin: 15% 10% 5%;
+	margin: 0% 10% 15%;
 	text-align: center;
 }
 
@@ -163,8 +163,8 @@ Register Form
 	margin: 0 13.5%;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
-	-webkit-transform: translate3d(0, -5.2em, 0);
-	transform: translate3d(0, -5.2em, 0);
+	-webkit-transform: translate3d(0, -6em, 0);
+	transform: translate3d(0, -6em, 0);
 }
 
 .Register input {
@@ -200,8 +200,8 @@ Register Form
 
 /* This covers all forms in the application */
 input:focus + label, .inputActive + label{
-	-webkit-transform: translate3d(0, -6.7em, 0);
-	transform: translate3d(0, -6.7em, 0);
+	-webkit-transform: translate3d(0, -7.5em, 0);
+	transform: translate3d(0, -7.5em, 0);
 }
 
 label::after {
@@ -223,8 +223,8 @@ label::after {
 	width: 65vw;
 	left: 0;
 	z-index: 2;
-	-webkit-transform: translate3d(0, 4.3em, 0);
-	transform: translate3d(0, 4.3em, 0);
+	-webkit-transform: translate3d(0, 5em, 0);
+	transform: translate3d(0, 5em, 0);
 }
 
 .usernameR:focus + label::after {
@@ -236,8 +236,8 @@ label::after {
 	width: 65vw;
 	left: 0;
 	z-index: 2;
-	-webkit-transform: translate3d(0, 4.3em, 0);
-	transform: translate3d(0, 4.3em, 0);
+	-webkit-transform: translate3d(0, 5em, 0);
+	transform: translate3d(0, 5em, 0);
 }
 
 .passwordR:focus + label::after {
@@ -249,6 +249,6 @@ label::after {
 	width: 65vw;
 	left: 0;
 	z-index: 2;
-	-webkit-transform: translate3d(0, 4.3em, 0);
-	transform: translate3d(0, 4.3em, 0);
+	-webkit-transform: translate3d(0, 5em, 0);
+	transform: translate3d(0, 5em, 0);
 }
