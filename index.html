@@ -8,11 +8,9 @@
 
 <body>
 
-<div class="MainBackground">
-
 	<div class="SplashContainer">
 
-<!-- Log in page section -->
+		<!-- Log in page section -->
 
 		<div id="LogInContainer">
 			<h1>Name!</h1>
@@ -35,7 +33,7 @@
 		</div>
 
 
-<!-- register page section -->
+		<!-- register page section -->
 
 		<div id="RegisterContainer">
 			<h1>Register</h1>
@@ -63,7 +61,6 @@
 
 	</div>
 
-</div>
-<script type="text/javascript" src="DIYJS.js"></script>
+	<script type="text/javascript" src="DIYJS.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ html, body, div {
   padding: 0;
   border: 0; 
   font-size: 16px;
-  overflow-y: scroll;
+  overflow: 
 }
 
 /****************************************************
@@ -14,17 +14,17 @@ Log In Page
 
 ****************************************************/
 
-.MainBackground {
-	position: absolute;
+body {
 	background-image: url("bgPattern.png");
     background-repeat: repeat;
 }
 
 .SplashContainer {
-	position: fixed;
+	position: relative;
 	background: #ffffff;
 	border-radius: 15px;
 	margin: 50px;
+	padding: 5em 0;
 	width: calc(100vw - 6em);
 	height: auto;
 	box-shadow: 10px 10px 50px rgba(0,0,0,0.2);
@@ -46,7 +46,7 @@ Log In Page
 	font-size: 6rem;
 	font-family: 'Gotham', sans-serif;
 	position: relative;
-	margin: 10% 10% 5%;
+	margin: 0 10% 5%;
 	text-align: center;
 }
 
