@@ -29,7 +29,7 @@
 			</form>
 
 			<p>Don't have an account?   <a id="RegisterPageLink" href="javascript:;">Make one.</a></p>
-			<p>Maybe you just want to browse instead?   <a href="javascript:;">Go for it.</a></p>
+			<p>Maybe you just want to browse instead?   <br><a href="javascript:;">Go for it.</a></p>
 		</div>
 
 
