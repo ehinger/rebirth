@@ -115,15 +115,15 @@ Log in & register forms
 .LogIn label, .Register label {
 	display: inline-block;
 	text-align: left;
-	font-size: 1.8rem;
+	font-size: 2rem;
 	font-family: "Gotham", sans-serif;
 	color: #000000; 
 	margin: 0 13.5%;
 	font-weight: 500;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
-	-webkit-transform: translate3d(0, -6em, 0);
-	transform: translate3d(0, -6em, 0);
+	-webkit-transform: translate3d(0, -4.8em, 0);
+	transform: translate3d(0, -4.8em, 0);
 }
 
 .LogIn input, .Register input {
@@ -164,8 +164,8 @@ Form interactions
 ****************************************************/
 
 input:focus + label, .inputActive + label{
-	-webkit-transform: translate3d(0, -7.5em, 0);
-	transform: translate3d(0, -7.5em, 0);
+	-webkit-transform: translate3d(0, -7em, 0);
+	transform: translate3d(0, -7em, 0);
 }
 
 label::after {

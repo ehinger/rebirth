@@ -50,7 +50,7 @@
 				<label>What'll your password be?</label>
 				
 				<input name="password1R" type="password">
-				<label>Type your password one more time.</label>
+				<label>Type your password once more.</label>
 				
 				<input type="submit" value="Make me an account!" name="register">
 
