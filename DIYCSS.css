@@ -1,3 +1,10 @@
+
+/****************************************************
+
+Page crossover
+
+****************************************************/
+
 html, body, div {
   height: 100%;
   width: 100%;
@@ -7,12 +14,6 @@ html, body, div {
   font-size: 16px;
   overflow: 
 }
-
-/****************************************************
-
-Log In Page
-
-****************************************************/
 
 body {
 	background-image: url("bgPattern.png");
@@ -29,6 +30,12 @@ body {
 	height: auto;
 	box-shadow: 10px 10px 50px rgba(0,0,0,0.2);
 }
+
+/****************************************************
+
+Log in page
+
+****************************************************/
 
 #LogInContainer {
 	display: block;
@@ -68,55 +75,6 @@ body {
 
 /****************************************************
 
-Log In Form
-
-****************************************************/
-
-.LogIn label {
-	display: inline-block;
-	text-align: left;
-	font-size: 1.8rem;
-	font-family: "Gotham", sans-serif;
-	color: #000000; 
-	margin: 0 13.5%;
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-	-webkit-transform: translate3d(0, -6em, 0);
-	transform: translate3d(0, -6em, 0);
-}
-
-.LogIn input {
-	position: relative;
-	display: inline-block;
-	z-index: 1;
-	width: 72%;
-	height: 15%;
-	margin: 0 10% 8%;
-	padding: 1em;
-	font-size: 2rem;
-	border: 0;
-	outline: 0;
-	background: transparent;
-  	border-bottom: 2px solid #444444;
-}
-
-.LogIn input::placeholder {
-	color: #000000;
-	font-size: 2rem;
-}
-
-.LogIn input[type=submit] {
-	width: 80%;
-	height: 15%;
-	margin: 0 10%;
-	font-size: 2.5rem;
-	background: transparent;
-	border-bottom: 5px solid #444444;
-	font-weight: 700;
-}
-
-/****************************************************
-
 Register Page
 
 ****************************************************/
@@ -150,24 +108,25 @@ Register Page
 
 /****************************************************
 
-Register Form
+Log in & register forms
 
 ****************************************************/
 
-.Register label {
+.LogIn label, .Register label {
 	display: inline-block;
 	text-align: left;
 	font-size: 1.8rem;
 	font-family: "Gotham", sans-serif;
 	color: #000000; 
 	margin: 0 13.5%;
+	font-weight: 500;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 	-webkit-transform: translate3d(0, -6em, 0);
 	transform: translate3d(0, -6em, 0);
 }
 
-.Register input {
+.LogIn input, .Register input {
 	position: relative;
 	display: inline-block;
 	z-index: 1;
@@ -182,31 +141,42 @@ Register Form
   	border-bottom: 2px solid #444444;
 }
 
-
-.Register input::placeholder {
+.LogIn input::placeholder, .Register input::placeholder {
 	color: #000000;
 	font-size: 2rem;
 }
 
-.Register input[type=submit] {
+.LogIn input[type=submit], .Register input[type=submit] {
 	width: 80%;
 	height: 15%;
-	margin: 2% 10%;
+	margin: 0 10%;
 	font-size: 2.5rem;
 	background: transparent;
 	border-bottom: 5px solid #444444;
 	font-weight: 700;
 }
 
-/* This covers all forms in the application */
+/****************************************************
+
+Form interactions
+(This covers all forms in the application)
+
+****************************************************/
+
 input:focus + label, .inputActive + label{
 	-webkit-transform: translate3d(0, -7.5em, 0);
 	transform: translate3d(0, -7.5em, 0);
 }
 
 label::after {
-	content: '';
+	content: '';	
+	color: #000;
     position: absolute;
+	top: 50%;
+	width: 65vw;
+	left: 0;
+	z-index: 2;
+	font-weight: 500;
     opacity: 0;
 	-webkit-transform: translate3d(0, 2.3em, 0);
 	transform: translate3d(0, 2.3em, 0);
@@ -214,41 +184,25 @@ label::after {
 	transition: transform 0.3s;
 }
 
+/* For the register page. Start: */
 .fName:focus + label::after {
-	content: 'Just your first name will do.';
-	opacity: .8;
-	color: #0044ff;
-    position: absolute;
-	top: 50%;
-	width: 65vw;
-	left: 0;
-	z-index: 2;
+	content: 'Just your first name will do, thanks.';
+	opacity: .5;
 	-webkit-transform: translate3d(0, 5em, 0);
 	transform: translate3d(0, 5em, 0);
 }
 
 .usernameR:focus + label::after {
-	content: "pssst you'll use this to log in";
-	opacity: .8;
-	color: #0044ff;
-    position: absolute;
-	top: 50%;
-	width: 65vw;
-	left: 0;
-	z-index: 2;
+	content: "You'll use this to log in.";
+	opacity: .5;
 	-webkit-transform: translate3d(0, 5em, 0);
 	transform: translate3d(0, 5em, 0);
 }
 
 .passwordR:focus + label::after {
-	content: 'Using numbers and capitilised letters makes your password harder to crack';
-	opacity: .8;
-	color: #0044ff;
-    position: absolute;
-	top: 50%;
-	width: 65vw;
-	left: 0;
-	z-index: 2;
+	content: 'Adding numbers and capitalised letters makes your password harder to crack';
+	opacity: .5;
 	-webkit-transform: translate3d(0, 5em, 0);
 	transform: translate3d(0, 5em, 0);
 }
+/* End */
