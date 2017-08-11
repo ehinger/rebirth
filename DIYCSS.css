@@ -1,8 +1,6 @@
 
 /****************************************************
-
 Page crossover
-
 ****************************************************/
 
 html, body, div {
@@ -32,9 +30,7 @@ body {
 }
 
 /****************************************************
-
 Log in page
-
 ****************************************************/
 
 #LogInContainer {
@@ -47,6 +43,7 @@ Log in page
 	position: relative;
 	margin: 15% 10% 5%;
 	text-align: center;
+	z-index: 3;
 }
 
 #LogInContainer h1:nth-child(1) {
@@ -74,9 +71,7 @@ Log in page
 }
 
 /****************************************************
-
 Register Page
-
 ****************************************************/
 
 #RegisterContainer {
@@ -107,9 +102,7 @@ Register Page
 
 
 /****************************************************
-
 Log in & register forms
-
 ****************************************************/
 
 .LogIn label, .Register label {
@@ -120,6 +113,7 @@ Log in & register forms
 	color: #000000; 
 	margin: 0 13.5%;
 	font-weight: 500;
+	z-index: 2;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 	-webkit-transform: translate3d(0, -4.8em, 0);
@@ -157,10 +151,8 @@ Log in & register forms
 }
 
 /****************************************************
-
 Form interactions
 (This covers all forms in the application)
-
 ****************************************************/
 
 input:focus + label, .inputActive + label{
@@ -184,10 +176,27 @@ label::after {
 	transition: transform 0.3s;
 }
 
+label::before {
+	content: '';	
+	background-color: #ffffff;
+    position: absolute;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 68vw;
+	z-index: -1;
+	-webkit-transform: translate3d(0, -1.8em, 0);
+	transform: translate3d(0, -1.8em, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
 /* For the register page. Start: */
 .fName:focus + label::after {
 	content: 'Just your first name will do, thanks.';
 	opacity: .5;
+	z-index: 3;
 	-webkit-transform: translate3d(0, 5em, 0);
 	transform: translate3d(0, 5em, 0);
 }
@@ -195,13 +204,15 @@ label::after {
 .usernameR:focus + label::after {
 	content: "You'll use this to log in.";
 	opacity: .5;
+	z-index: 3;
 	-webkit-transform: translate3d(0, 5em, 0);
 	transform: translate3d(0, 5em, 0);
 }
 
 .passwordR:focus + label::after {
-	content: 'Adding numbers and capitalised letters makes your password harder to crack';
+	content: '';
 	opacity: .5;
+	z-index: 3;
 	-webkit-transform: translate3d(0, 5em, 0);
 	transform: translate3d(0, 5em, 0);
 }
