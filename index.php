@@ -14,7 +14,7 @@
 
 		<div id="LogInContainer">
 			<h1>Name!</h1>
-			<p>Find and share assistive creations.</p>
+			<p>brief description of service being offered.</p>
 			<h1>Log In</h1>
 
 			<form class='LogIn' action='' method='post'>
@@ -28,8 +28,8 @@
 
 			</form>
 
-			<p>Don't have an account?   <a id="RegisterPageLink" href="#">Make one.</a></p>
-			<p>Just want to browse instead?   <br><a href="#">Go for it.</a></p>
+			<p>Don't have an account?   <a id="RegisterPageLink" href="javascript:;">Make one.</a></p>
+			<p>Maybe you just want to browse instead?   <br><a href="javascript:;">Go for it.</a></p>
 		</div>
 
 
@@ -44,13 +44,13 @@
 				<label>What's your name, friend?</label>
 
 				<input class="usernameR" name="usernameR" type="text">
-				<label><br>What'll your username be?</label>
+				<label>What'll your username be?</label>
 				
 				<input class="passwordR" name="passwordR" type="password">
-				<label><br>What'll your password be?</label>
+				<label>What'll your password be?</label>
 				
 				<input name="password1R" type="password">
-				<label><br>Type your password once more.</label>
+				<label>Type your password once more.</label>
 				
 				<input type="submit" value="Make me an account!" name="register">
 
