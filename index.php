@@ -10,12 +10,32 @@
 
 	<div class="SplashContainer">
 
+		<!-- menu navigation and navigation list screen -->
+
+		<div class="navigationContainer">
+			<div class="navigationClose">
+				<div class="lineL"></div>
+				<div class="lineR"></div>
+			</div>
+			<p class="savedSelections navLinks"><b>Saved<br>Selections</b></p>
+			<p class="profile navLinks"><b>Profile</b></p>
+			<p class="settings navLinks"><b>Settings</b></p>
+		</div>
+		<div class="navigationHeader">
+			<h2>Menu</h2>
+		</div>
+<!-- 
+		<div class="yourSettingsPage">
+			<label> Font size:</label>
+			<input class="textSize" type="range" name="textSize" min="12" max="20" onchange="textSize(this.value)"></input>
+		</div>
+ -->
 		<!-- Log in page section -->
 
 		<div id="LogInContainer">
 			<h1>Name!</h1>
-			<p>brief description of service being offered.</p>
-			<h1>Log In</h1>
+			<p>Find and share assistive creations.</p>
+			<h2>Log In</h2>
 
 			<form class='LogIn' action='' method='post'>
 				<input name="username" type="text">
@@ -29,14 +49,13 @@
 			</form>
 
 			<p>Don't have an account?   <a id="RegisterPageLink" href="javascript:;">Make one.</a></p>
-			<p>Maybe you just want to browse instead?   <br><a href="javascript:;">Go for it.</a></p>
-		</div>
 
+		</div>
 
 		<!-- register page section -->
 
 		<div id="RegisterContainer">
-			<h1>Register</h1>
+			<h2>Register</h2>
 
 			<form enctype="multipart/form-data" class='Register' action='' method='post'>
 
@@ -57,6 +76,12 @@
 			</form>
 
 			<p id="LogInReturnLink">Changed your mind?   <a href="javascript:;">Take me back.</a></p>
+		</div>
+
+		<!-- menu screen and content screen switch -->
+
+		<div class="browseFooter">
+			<h2>Browse</h2>
 		</div>
 
 	</div>
