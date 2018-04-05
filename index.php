@@ -24,12 +24,12 @@
 		<div class="navigationHeader">
 			<h2>Menu</h2>
 		</div>
-<!-- 
-		<div class="yourSettingsPage">
+
+		<div class="settingsContainer">
 			<label> Font size:</label>
 			<input class="textSize" type="range" name="textSize" min="12" max="20" onchange="textSize(this.value)"></input>
 		</div>
- -->
+
 		<!-- Log in page section -->
 
 		<div id="LogInContainer">
