@@ -1,15 +1,69 @@
 window.onload=function(){
 
+
+	var touchstartX = 0;
+	var touchstartY = 0;
+	var touchendX = 0;
+	var touchendY = 0;
+
+	var remainder = 0;
+
+	var LogInContainer = document.getElementById("LogInContainer");
+
+	LogInContainer.addEventListener('touchstart', function(event) {
+	    touchstartX = event.changedTouches[0].screenX;
+	}, false);
+
+	LogInContainer.addEventListener('touchend', function(event) {
+	    touchendX = event.changedTouches[0].screenX;
+		handleGesure();
+	}, false); 
+
+	function handleGesure() {
+		var swiped = 'swiped: ';
+		if (touchendX < touchstartX) {
+			remainder = touchstartX - touchendX;
+			console.log(remainder);
+		}
+		if (touchendX > touchstartX) {
+			remainder = touchendX - touchstartX;
+			console.log(remainder);
+		}
+	}
+
+	// Input Field label interaction ///////////////////////////////////////////////////////////////////////////////////
+
+	var navigationHeader = document.querySelector(".navigationHeader");
+	var browseFooter = document.querySelector(".browseFooter");
+	var navigationClose = document.querySelector(".navigationClose")
+	var navigationContainer = document.querySelector(".navigationContainer")
+
+	navigationHeader.addEventListener("click", function(){
+		navigationContainer.classList.add('menuTransition');
+		navigationClose.classList.add('menuTransition');
+	}, false);
+
+	navigationClose.addEventListener("click", function(){
+		navigationContainer.classList.remove('menuTransition');
+		navigationClose.classList.remove('menuTransition');
+	}, false);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
 	// Log in and register section switching ////////////////////////////////////////////////////////////////////////////
 
 	var RegisterPageLink = document.getElementById("RegisterPageLink");
-	var LogInContainer = document.getElementById("LogInContainer");
 	var RegisterContainer = document.getElementById("RegisterContainer");
 	var LogInReturnLink = document.getElementById("LogInReturnLink");
 
 	if (RegisterPageLink) {
 		RegisterPageLink.addEventListener("click", function(){
 			LogInContainer.style.display = 'none';
+			navigationHeader.style.display = 'none';
+			browseFooter.style.display = 'none';
 			RegisterContainer.style.display = 'block';
 		}, false);
 	} else {
@@ -19,6 +73,8 @@ window.onload=function(){
 	if (LogInReturnLink) {
 		LogInReturnLink.addEventListener("click", function(){
 			LogInContainer.style.display = 'block';
+			navigationHeader.style.display = 'block';
+			browseFooter.style.display = 'block';
 			RegisterContainer.style.display = 'none';
 		}, false);
 	} else {
@@ -64,4 +120,13 @@ window.onload=function(){
 	})();
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+}	
+
+var textChanger = document.querySelector("html");
+
+function textSize(v) {
+	textChanger.style.fontSize = v + "px";
+	console.log(v);
 }
