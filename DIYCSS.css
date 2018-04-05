@@ -12,28 +12,6 @@ html, body, div {
   font-size: 16px;
 }
 
-.settingsContainer {
-display: none;
-}
-
-.settingsContainer input {
-  width: 80%;
-  height: 15%;
-  margin: 20% 10%;
-  padding: .5em;
-  outline: none;
-  font-size: 2rem; 
-}
-
-.settingsContainer label {
-  position: absolute;
-  margin: 20% 10%;
-  padding: .5em;
-  font-size: 2rem;
-  font-family: "Open Sans", sans-serif;
-  color: #fcce00; }
-
-
 .SplashContainer {
 	position: relative;
 	background: #ffffff;
@@ -48,7 +26,7 @@ display: none;
 	position: fixed;
 	background: #ffffff;
 	border-bottom: 2px solid black;
-	bottom: 15px;
+	top: calc(100vh - 115px);
 	border-radius: 0 0 100px 100px;
 	margin: 0;
 	width: 100vw;
@@ -329,3 +307,28 @@ label::before {
 	transform: translate3d(0, 5em, 0);
 }
 /* End */
+
+/****************************************************
+Settings page
+****************************************************/
+.settingsContainer {
+	display: none;
+}
+
+.settingsContainer input {
+	width: 80%;
+	height: 15%;
+	margin: 20% 10%;
+	padding: .5em;
+	outline: none;
+	font-size: 2rem; 
+}
+
+.settingsContainer label {
+	position: absolute;
+	margin: 20% 10%;
+	padding: .5em;
+	font-size: 2rem;
+	font-family: "Open Sans", sans-serif;
+	color: #fcce00; 
+}

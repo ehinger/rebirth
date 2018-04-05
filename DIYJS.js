@@ -24,6 +24,36 @@ window.onload=function(){
 	var remainder = 0;
 
 
+
+	// Navigation interaction ///////////////////////////////////////////////////////////////////////////////////
+
+	navigationHeader.addEventListener("click", function(){
+		navigationContainer.classList.add('menuTransition');
+		navigationClose.classList.add('menuTransition');
+	}, false);
+
+	navigationClose.addEventListener("click", function(){
+		navigationContainer.classList.remove('menuTransition');
+		navigationClose.classList.remove('menuTransition');
+	}, false);
+
+	settings.addEventListener("click", function(){
+		LogInContainer.style.display = 'none';
+		settingsContainer.style.display = 'grid';
+		navigationContainer.classList.remove('menuTransition');
+		navigationClose.classList.remove('menuTransition');
+	}, false);
+
+
+	profile.addEventListener("click", function(){
+		LogInContainer.style.display = 'block';
+		settingsContainer.style.display = 'none';
+		navigationContainer.classList.remove('menuTransition');
+		navigationClose.classList.remove('menuTransition');
+	}, false);
+
+	// Swipe functionality //
+
 	splashContainer.addEventListener('touchstart', function(event) {
 	    touchstartX = event.changedTouches[0].screenX;
 	}, false);
@@ -53,35 +83,7 @@ window.onload=function(){
 		}
 	}
 
-	settings.addEventListener("click", function(){
-		LogInContainer.style.display = 'none';
-		settingsContainer.style.display = 'grid';
-		navigationContainer.classList.remove('menuTransition');
-		navigationClose.classList.remove('menuTransition');
-	}, false);
-
-
-	profile.addEventListener("click", function(){
-		LogInContainer.style.display = 'block';
-		settingsContainer.style.display = 'none';
-		navigationContainer.classList.remove('menuTransition');
-		navigationClose.classList.remove('menuTransition');
-	}, false);
-
-	// Input Field label interaction ///////////////////////////////////////////////////////////////////////////////////
-
-	navigationHeader.addEventListener("click", function(){
-		navigationContainer.classList.add('menuTransition');
-		navigationClose.classList.add('menuTransition');
-	}, false);
-
-	navigationClose.addEventListener("click", function(){
-		navigationContainer.classList.remove('menuTransition');
-		navigationClose.classList.remove('menuTransition');
-	}, false);
-
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 
@@ -110,8 +112,6 @@ window.onload=function(){
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 
@@ -152,9 +152,13 @@ window.onload=function(){
 
 }	
 
+// Settings functionality (placed outside of onLoad so html can link to it) //////////////////////////////////
+
 var textChanger = document.querySelector("html");
 
 function textSize(v) {
 	textChanger.style.fontSize = v + "px";
 	console.log(v);
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
