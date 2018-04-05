@@ -11,9 +11,7 @@ window.onload=function(){
 	var navigationContainer = document.querySelector(".navigationContainer")
 
 	var touchstartX = 0;
-	var touchstartY = 0;
 	var touchendX = 0;
-	var touchendY = 0;
 
 	var remainder = 0;
 
@@ -28,17 +26,19 @@ window.onload=function(){
 	}, false); 
 
 	function handleGesure() {
-		var swiped = 'swiped: ';
 		if (touchendX < touchstartX) {
 			remainder = touchstartX - touchendX;
-			if (remainder >= 200) {
-				LogInContainer.style.display = 'none';
+			if (remainder >= 100) {
+				LogInContainer.style.background = 'red';
+				console.log(remainder);
 			}
 		}
+
 		if (touchendX > touchstartX) {
 			remainder = touchendX - touchstartX;
-			if (remainder <= 200) {
-				LogInContainer.style.display = 'block';
+			if (remainder >= 100) {
+				LogInContainer.style.background = 'green';
+				console.log(remainder);
 			}
 		}
 	}
