@@ -1,5 +1,7 @@
 window.onload=function(){
 
+	var splashContainer = document.querySelector(".SplashContainer");
+
 	var LogInContainer = document.getElementById("LogInContainer");
 	var RegisterPageLink = document.getElementById("RegisterPageLink");
 	var RegisterContainer = document.getElementById("RegisterContainer");
@@ -16,11 +18,11 @@ window.onload=function(){
 	var remainder = 0;
 
 
-	LogInContainer.addEventListener('touchstart', function(event) {
+	splashContainer.addEventListener('touchstart', function(event) {
 	    touchstartX = event.changedTouches[0].screenX;
 	}, false);
 
-	LogInContainer.addEventListener('touchend', function(event) {
+	splashContainer.addEventListener('touchend', function(event) {
 	    touchendX = event.changedTouches[0].screenX;
 		handleGesure();
 	}, false); 
@@ -29,7 +31,7 @@ window.onload=function(){
 		if (touchendX < touchstartX) {
 			remainder = touchstartX - touchendX;
 			if (remainder >= 100) {
-				LogInContainer.style.background = 'red';
+				LogInContainer.style.display = 'none';
 				console.log(remainder);
 			}
 		}
@@ -37,7 +39,7 @@ window.onload=function(){
 		if (touchendX > touchstartX) {
 			remainder = touchendX - touchstartX;
 			if (remainder >= 100) {
-				LogInContainer.style.background = 'green';
+				LogInContainer.style.display = 'block';
 				console.log(remainder);
 			}
 		}
