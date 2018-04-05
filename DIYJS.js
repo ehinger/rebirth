@@ -4,6 +4,10 @@ window.onload=function(){
 
 	var settingsContainer = document.querySelector(".settingsContainer");
 
+	var settings = document.querySelector(".settings");
+	var profile = document.querySelector(".profile");
+	var savedSelections = document.querySelector(".savedSelections");
+
 	var LogInContainer = document.getElementById("LogInContainer");
 	var RegisterPageLink = document.getElementById("RegisterPageLink");
 	var RegisterContainer = document.getElementById("RegisterContainer");
@@ -48,6 +52,21 @@ window.onload=function(){
 			}
 		}
 	}
+
+	settings.addEventListener("click", function(){
+		LogInContainer.style.display = 'none';
+		settingsContainer.style.display = 'grid';
+		navigationContainer.classList.remove('menuTransition');
+		navigationClose.classList.remove('menuTransition');
+	}, false);
+
+
+	profile.addEventListener("click", function(){
+		LogInContainer.style.display = 'block';
+		settingsContainer.style.display = 'none';
+		navigationContainer.classList.remove('menuTransition');
+		navigationClose.classList.remove('menuTransition');
+	}, false);
 
 	// Input Field label interaction ///////////////////////////////////////////////////////////////////////////////////
 
