@@ -23,11 +23,11 @@ window.onload=function(){
 		var swiped = 'swiped: ';
 		if (touchendX < touchstartX) {
 			remainder = touchstartX - touchendX;
-			console.log(remainder);
+			alert(remainder);
 		}
 		if (touchendX > touchstartX) {
 			remainder = touchendX - touchstartX;
-			console.log(remainder);
+			alert(remainder);
 		}
 	}
 
