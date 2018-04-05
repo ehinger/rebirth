@@ -12,11 +12,11 @@ html, body, div {
   font-size: 16px;
 }
 
-/*.yourSettingsPage {
-display: block;
+.settingsContainer {
+display: none;
 }
 
-.yourSettingsPage input {
+.settingsContainer input {
   width: 80%;
   height: 15%;
   margin: 20% 10%;
@@ -25,14 +25,14 @@ display: block;
   font-size: 2rem; 
 }
 
-.yourSettingsPage label {
+.settingsContainer label {
   position: absolute;
   margin: 20% 10%;
   padding: .5em;
   font-size: 2rem;
   font-family: "Open Sans", sans-serif;
   color: #fcce00; }
-*/
+
 
 .SplashContainer {
 	position: relative;

@@ -2,6 +2,8 @@ window.onload=function(){
 
 	var splashContainer = document.querySelector(".SplashContainer");
 
+	var settingsContainer = document.querySelector(".settingsContainer");
+
 	var LogInContainer = document.getElementById("LogInContainer");
 	var RegisterPageLink = document.getElementById("RegisterPageLink");
 	var RegisterContainer = document.getElementById("RegisterContainer");
@@ -32,7 +34,8 @@ window.onload=function(){
 			remainder = touchstartX - touchendX;
 			if (remainder >= 100) {
 				LogInContainer.style.display = 'none';
-				console.log(remainder);
+				settingsContainer.style.display = 'grid';
+				console.log("Left");
 			}
 		}
 
@@ -40,7 +43,8 @@ window.onload=function(){
 			remainder = touchendX - touchstartX;
 			if (remainder >= 100) {
 				LogInContainer.style.display = 'block';
-				console.log(remainder);
+				settingsContainer.style.display = 'none';
+				console.log("Right");
 			}
 		}
 	}
