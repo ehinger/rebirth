@@ -1,5 +1,14 @@
 window.onload=function(){
 
+	var LogInContainer = document.getElementById("LogInContainer");
+	var RegisterPageLink = document.getElementById("RegisterPageLink");
+	var RegisterContainer = document.getElementById("RegisterContainer");
+	var LogInReturnLink = document.getElementById("LogInReturnLink");
+
+	var navigationHeader = document.querySelector(".navigationHeader");
+	var browseFooter = document.querySelector(".browseFooter");
+	var navigationClose = document.querySelector(".navigationClose")
+	var navigationContainer = document.querySelector(".navigationContainer")
 
 	var touchstartX = 0;
 	var touchstartY = 0;
@@ -8,7 +17,6 @@ window.onload=function(){
 
 	var remainder = 0;
 
-	var LogInContainer = document.getElementById("LogInContainer");
 
 	LogInContainer.addEventListener('touchstart', function(event) {
 	    touchstartX = event.changedTouches[0].screenX;
@@ -23,20 +31,19 @@ window.onload=function(){
 		var swiped = 'swiped: ';
 		if (touchendX < touchstartX) {
 			remainder = touchstartX - touchendX;
-			alert(remainder);
+			if (remainder >= 200) {
+				LogInContainer.style.display = 'none';
+			}
 		}
 		if (touchendX > touchstartX) {
 			remainder = touchendX - touchstartX;
-			alert(remainder);
+			if (remainder <= 200) {
+				LogInContainer.style.display = 'block';
+			}
 		}
 	}
 
 	// Input Field label interaction ///////////////////////////////////////////////////////////////////////////////////
-
-	var navigationHeader = document.querySelector(".navigationHeader");
-	var browseFooter = document.querySelector(".browseFooter");
-	var navigationClose = document.querySelector(".navigationClose")
-	var navigationContainer = document.querySelector(".navigationContainer")
 
 	navigationHeader.addEventListener("click", function(){
 		navigationContainer.classList.add('menuTransition');
@@ -54,10 +61,6 @@ window.onload=function(){
 
 
 	// Log in and register section switching ////////////////////////////////////////////////////////////////////////////
-
-	var RegisterPageLink = document.getElementById("RegisterPageLink");
-	var RegisterContainer = document.getElementById("RegisterContainer");
-	var LogInReturnLink = document.getElementById("LogInReturnLink");
 
 	if (RegisterPageLink) {
 		RegisterPageLink.addEventListener("click", function(){
